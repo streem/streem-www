@@ -1,0 +1,64 @@
+.device-fan {
+    text-align: center;
+
+    .device-fan-wrapper {
+        display: inline-block;
+        position: relative;
+
+        .cover {
+            z-index: 5;
+        }
+
+        .fan {
+            position: absolute;
+            left: 15%;
+            top: 3%;
+
+            &.left {
+                transform-origin: 105% 105%;
+            }
+
+            &.right {
+                transform-origin: -5% 105%;
+            }
+
+            &.one {
+                transition: transform 800ms cubic-bezier(0.165, 0.84, 0.44, 1) 400ms;
+            }
+
+            &.two {
+                transition: transform 800ms cubic-bezier(0.165, 0.84, 0.44, 1) 700ms;
+            }
+        }
+    }
+
+    &.focus {
+        .device-fan-wrapper {
+            .fan {
+                &.left {
+                    &.two {
+                        transform: rotate(-7deg) translateX(-50%) translateY(-4%);
+                        z-index: 3;
+                    }
+
+                    &.one {
+                        transform: rotate(-3deg) translateX(-40%) translateY(-4%);
+                        z-index: 2;
+                    }
+                }
+
+                &.right {
+                    &.one {
+                        transform: rotate(3deg) translateX(40%) translateY(-4%);
+                        z-index: 2;
+                    }
+
+                    &.two {
+                        transform: rotate(7deg) translateX(50%) translateY(-4%);
+                        z-index: 3;
+                    }
+                }
+            }
+        }
+    }
+}

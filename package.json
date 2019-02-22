@@ -1,0 +1,15 @@
+{
+  "name": "newsite",
+  "version": "1.0.0",
+  "devDependencies": {
+    "gulp": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-clean-css": "*",
+    "gulp-sass": "*",
+    "gulp-concat": "*",
+    "gulp-watch": "*",
+    "gulp-uglify": "*",
+    "browser-sync": "*",
+    "del": "*"
+  }
+}

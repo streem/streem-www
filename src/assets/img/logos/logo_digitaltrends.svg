@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="136" height="24" viewBox="0 0 136 24">
+    <defs>
+        <path id="a" d="M0 .279h23.722V24H0z"/>
+        <path id="c" d="M0 24h136.012V.278H0z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd" opacity=".4">
+        <g transform="translate(.2 -.278)">
+            <mask id="b" fill="#fff">
+                <use xlink:href="#a"/>
+            </mask>
+            <path fill="#7F7F7F" fill-opacity=".4" d="M0 24.001h23.722V.279H0z" mask="url(#b)"/>
+        </g>
+        <path fill="#7F7F7F" d="M5.471 14.023h2.636v-.581H5.471zM5.471 15.323h2.636v-.581H5.471zM5.471 16.623h4.744v-.58H5.471zM5.471 17.923h4.744v-.58H5.471z"/>
+        <path fill="#7F7F7F" d="M10.825 5.272h2.471v5.02h5.354v2.61h-5.354v5.02h-2.47v-5.02H5.47v-2.61h5.354z"/>
+        <g transform="translate(.2 -.278)">
+            <text fill="#7F7F7F" font-family="HelveticaNeue-Medium, Helvetica Neue" font-size="12.388" font-weight="400" letter-spacing="-.004">
+                <tspan x="32.156" y="13.854">DIGI</tspan> <tspan x="57.375" y="13.854" letter-spacing="-1.145">T</tspan> <tspan x="62.436" y="13.854">AL </tspan>
+            </text>
+            <text fill="#7F7F7F" font-family="HelveticaNeue-Medium, Helvetica Neue" font-size="12.388" font-weight="400" letter-spacing="-.004">
+                <tspan x="85.386" y="13.854">TREND</tspan>
+            </text>
+            <mask id="d" fill="#fff">
+                <use xlink:href="#c"/>
+            </mask>
+            <text fill="#7F7F7F" font-family="HelveticaNeue-Medium, Helvetica Neue" font-size="12.388" font-weight="400" mask="url(#d)">
+                <tspan x="128.022" y="13.854">S</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,39 @@
+form {
+    display: block;
+    padding: 40px 0;
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="number"] {
+        appearance: none;
+
+
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+
+        padding: 9px 10px;
+        margin: 12px auto;
+
+        background: #fff;
+        border: 1px solid #cecece;
+        border-radius: 4px;
+
+        font-family: $font-family-type;
+        font-size: 13px;
+
+        &::placeholder {
+            color: rgba(16, 17, 49, 0.54);
+        }
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    form {
+        input[type="text"],
+        input[type="email"] {
+            padding: 13px 15px;
+        }
+    }
+}

@@ -1,0 +1,53 @@
+.carousel {
+    position: relative;
+
+    .carousel-content {
+        position: relative;
+        
+        .carousel-page {
+            position: relative;
+
+            .text-block {
+                text-align: center;
+                max-width: 60%;
+                margin: 0 auto;
+
+                &.fill {
+                    width: 100%;
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+
+    .carousel-control {
+        position: absolute;
+        top: 55%;
+
+        &.left {
+            left: -50px;
+        }
+
+        &.right {
+            right: -50px;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .carousel {
+        &.chromeless-desktop {
+            .carousel-control {
+                display: none;
+            }
+
+            .carousel-content {           
+                .carousel-page {    
+                    .text-block {
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+}

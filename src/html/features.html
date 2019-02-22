@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title></title>
+
+    <meta charset="utf-8">
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fafafa">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+  
+  <div class="modal" id="modal-request-demo">
+    <div class="modal-wrapper">
+
+      <img src="img/particles/p5.svg" class="particle" style="right: 100%; top: 50%; margin-right: -45px;">
+      <img src="img/particles/p1.svg" class="particle" style="left: 100%; top: 75%; margin-left: -105px;">
+
+      <div class="modal-content">
+        <div class="modal-close">
+          <img class="bg" src="img/particles/p5.svg" alt="">
+          <a href="#" data-modal-close><img src="img/icons/close.svg" alt="Close modal"></a>
+        </div>
+        <div class="text-center">
+          <h3>Yes, sign me up!</h3>
+          <p class="m-t-sm">
+            We'll email you a link to get started today
+          </p>
+          <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+            <input type="hidden" name="oid" value="00D6A000001i8ic">
+            <input type="hidden" name="retURL" value="https://streem.pro/">
+            <input type="text" placeholder="First name" id="first_name" name="first_name" maxlength="40">
+            <input type="text" placeholder="Last name" id="last_name" name="last_name" maxlength="80">
+            <input type="text" placeholder="Company" id="company" name="company" maxlength="40">
+            <input type="text" placeholder="Email address" id="email" name="email" maxlength="80">
+            <button type="submit" class="btn btn-hero m-t-sm">Demo</button>
+          </form>
+          <aside>* we won't share your information</aside>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <header>
+    <a href="/">
+      <svg xmlns="http://www.w3.org/2000/svg" width="138" height="33" viewBox="0 0 138 33">
+        <g class="streem-logo" fill-rule="evenodd">
+            <g class="logo-mark">
+                <path d="M16.502 32.846C7.402 32.846 0 25.553 0 16.59 0 7.63 7.402.337 16.498.334h.004c3.623 0 7.224 1.23 10.133 3.465 4.57 3.508 6.904 9.243 6.092 14.964-.139.976-1.053 1.654-2.043 1.518a1.786 1.786 0 0 1-1.54-2.013c.633-4.465-1.184-8.931-4.734-11.657-2.279-1.75-5.09-2.712-7.912-2.712h-.004c-7.103 0-12.878 5.693-12.878 12.69 0 6.999 5.778 12.691 12.882 12.691 1.001 0 1.81.8 1.81 1.783.003.983-.809 1.783-1.806 1.783z" opacity=".4"/>
+                <path d="M16.502 32.846c-8.12 0-15.137-5.958-16.324-13.857a1.786 1.786 0 0 1 1.526-2.023c.99-.143 1.908.528 2.054 1.503.925 6.166 6.404 10.815 12.744 10.815 1.001 0 1.81.8 1.81 1.783 0 .979-.813 1.779-1.81 1.779z" opacity=".7"/>
+                <path d="M30.939 20.302a1.48 1.48 0 0 1-.251-.018 1.786 1.786 0 0 1-1.54-2.012 12.468 12.468 0 0 0-2.163-8.989 1.766 1.766 0 0 1 .448-2.482 1.827 1.827 0 0 1 2.52.441 15.978 15.978 0 0 1 2.777 11.521 1.804 1.804 0 0 1-1.791 1.54z" opacity=".3"/>
+                <path d="M16.385 32.842c-.987 0-1.788-.789-1.788-1.761 0-.972.801-1.761 1.788-1.761 1.726 0 3.128-1.385 3.128-3.081 0-1.6-1.216-2.92-2.83-3.067a1.713 1.713 0 0 1-.236-.04l-1.507-.344c-.04-.01-.08-.018-.117-.032-2.836-.854-4.744-3.394-4.744-6.317 0-3.644 3.007-6.607 6.707-6.607 2.672 0 5.09 1.56 6.153 3.978a1.75 1.75 0 0 1-.928 2.317 1.798 1.798 0 0 1-2.352-.915 3.132 3.132 0 0 0-2.873-1.858c-1.726 0-3.128 1.385-3.128 3.085 0 1.349.867 2.518 2.16 2.93l1.328.305c3.394.38 5.939 3.178 5.939 6.565.007 3.64-3.004 6.603-6.7 6.603z"/>
+                <ellipse cx="30.939" cy="18.516" opacity=".3" rx="1.813" ry="1.786"/>
+                <ellipse cx="29.086" cy="23.756" rx="1.821" ry="1.793"/>
+            </g>
+            <g class="logo-text">
+                <path d="M49.134 25.722c2.261 0 3.626-.588 3.626-2.622 0-1.869-1.165-2.195-3.79-2.948-2.895-.786-5.59-1.672-5.59-5.438 0-3.178 2.528-4.588 5.623-4.588 1.897 0 3.66.262 5.221 1.116l-.83 1.9c-1.165-.624-2.629-.918-4.191-.918-1.963 0-3.426.395-3.426 2.622 0 1.837 1.696 2.393 3.86 2.981 2.628.721 5.52 1.442 5.52 5.015 0 3.605-2.262 4.982-5.888 4.982-2.462 0-4.625-.395-6.387-1.474l.797-1.934c1.562.883 3.46 1.306 5.455 1.306zM59.912 19.334v-6.751h-2.928v-2.062h2.928V5.377l2.461-.327v5.474H66.2l-.233 2.063h-3.594v7.439c0 2.884.033 4.523 2.163 6.521l-1.664 1.377c-2.76-2.17-2.96-4.889-2.96-8.59zM68.96 27.426V16.647c0-2.03-.131-4.064-.597-5.865l2.06-.459c.332.886.598 1.901.798 2.916.932-1.868 2.494-2.916 5.156-3.113l.331 2.622c-2.727.032-4.325 1.18-5.287 3.605v11.076H68.96v-.003z"/>
+                <path fill-rule="nonzero" d="M86.255 27.82c-4.522 0-7.482-1.836-7.482-8.849 0-7.339 3.426-8.845 7.151-8.845 4.326 0 6.82 2.03 6.82 9.24v.294l-11.444.918c.098 3.964 1.897 5.176 4.955 5.176 1.763 0 3.292-.394 4.858-1.309l.9 1.869c-1.73 1.112-3.693 1.506-5.758 1.506zm4.06-9.993c-.065-4.261-1.696-5.635-4.39-5.635-2.896 0-4.69 1.571-4.69 6.127v.358l9.08-.85zM103.456 27.82c-4.522 0-7.482-1.836-7.482-8.849 0-7.339 3.426-8.845 7.151-8.845 4.326 0 6.82 2.03 6.82 9.24v.294l-11.444.918c.098 3.964 1.897 5.176 4.955 5.176 1.763 0 3.292-.394 4.858-1.309l.899 1.869c-1.733 1.112-3.696 1.506-5.757 1.506zm4.057-9.993c-.066-4.261-1.697-5.635-4.392-5.635-2.894 0-4.69 1.571-4.69 6.127v.358l9.082-.85z"/>
+                <path d="M135.357 27.426v-9.24c0-3.702-.2-6.03-3.66-6.03-2.396 0-3.594 1.245-4.657 3.408v11.862h-2.461V16.382c0-2.36-.597-4.226-3.66-4.226-2.396 0-3.594 1.245-4.657 3.408v11.862h-2.461V16.647c0-2.03-.131-4.064-.597-5.865l2.06-.459c.3.818.532 1.672.7 2.522.997-1.768 2.694-2.719 5.454-2.719 2.727 0 4.158 1.148 4.923 2.916 1.23-1.998 3.026-2.916 5.855-2.916 4.825 0 5.622 3.637 5.622 7.6v9.7h-2.461z"/>
+            </g>
+        </g>
+      </svg>
+    </a>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="/" class="lnk-classy mobile-only">Home</a>
+        <a href="features.html" class="lnk-classy">Features</a>
+        <a href="about.html" class="lnk-classy">About</a>
+        <a href="#" class="btn btn-hero" data-modal-show="#modal-request-demo">Demo</a>
+      </div>
+    </nav>
+    <button class="nav-toggle">Open Menu</button>
+  </header>
+
+  <section id="section-features-welcome" class="landing">
+    <img src="img/particles/p10.svg" class="particle parallax" data-speed="0.50" style="left: -50px; top: 40%;">
+    <img src="img/particles/p11.svg" class="particle parallax" data-speed="0.10" style="left: 45%; top: 70%;">
+    <img src="img/particles/p12.svg" class="particle parallax" data-speed="0.70" style="right: 0; top: 40%;">
+    <h2 class="text-center">
+      <span class="context parallax animate zoom-up" data-opacity="-2">Features</span>
+      <span class="parallax animate zoom-up delay-sm" data-opacity="-1.5">Tools that let you guide.</span>
+    </h2>
+    
+  </section>
+
+  <section class="landing-overlap space">
+    <img src="img/mockups/mockup_controlui.png" class="hero-image max" alt="">
+    <div class="container section-break-sm m-t-lg">
+      <h2>Our management tool</h2>
+      <p class="m-t-md">
+        Our platform uses special mapping to recognize objects and allow you to interact with 
+        customers with 3d video. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </p>
+      <a href="#" class="lnk-classy cta" data-modal-show="#modal-request-demo">Demo</a>
+    </div>
+  </section>
+  <hr>
+  <section id="section-vision" class="space">
+    <div class="container">
+      <h2 class="text-center">
+        <span class="context parallax animate zoom-up">Features</span>
+        <span class="parallax animate zoom-up delay-sm">Our toolset</span>
+      </h2>
+      
+      <div class="row m-t-lg">
+        <div class="col-md-5 display-none display-block-md">
+          <div class="tabs list">
+            <a href="#" class="tab active " data-carousel-goto="0" data-carousel-control="carousel-toolset">Draw</a>
+            <a href="#" class="tab" data-carousel-goto="1" data-carousel-control="carousel-toolset">Measure</a>
+            <a href="#" class="tab" data-carousel-goto="2" data-carousel-control="carousel-toolset">Arrow</a>
+            <a href="#" class="tab" data-carousel-goto="3" data-carousel-control="carousel-toolset">Laser</a>
+            <a href="#" class="tab" data-carousel-goto="4" data-carousel-control="carousel-toolset">Text</a>
+            <a href="#" class="tab" data-carousel-goto="5" data-carousel-control="carousel-toolset">GPS</a>
+          </div>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-6">
+          <div class="carousel chromeless-desktop" id="carousel-toolset">
+            <div class="carousel-control left"><a href="#" data-carousel-prev><img src="img/icons/chevron_left.svg" alt="Previous"></a></div>
+            <div class="carousel-control right"><a href="#" data-carousel-next><img src="img/icons/chevron_right.svg" alt="Next"></a></div>
+            <div class="carousel-content">
+              <div class="carousel-page">
+                <video muted loop autoplay playsinline class="fill-sm">
+                  <source src="video/tools_draw.mp4" type="video/mp4">
+                </video>
+                <div class="text-block fill">
+                  <p class="title">Draw</p>
+                  <p>
+                    Our platform uses spacial mapping to recognize objects and allow you to interact
+                    with customers with 3d video. Lorem ipsum dolor sit amet, consectetur
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-page">
+                <div class="text-block fill">
+                  <p class="title">Measure</p>
+                  <p>
+                    Our platform uses spacial mapping to recognize objects and allow you to interact
+                    with customers with 3d video. Lorem ipsum dolor sit amet, consectetur
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-page">
+                 <video muted loop autoplay playsinline class="fill-sm">
+                  <source src="video/tools_arrow.mp4" type="video/mp4">
+                </video>
+                <div class="text-block fill">
+                  <p class="title">Arrow</p>
+                  <p>
+                    Our platform uses spacial mapping to recognize objects and allow you to interact
+                    with customers with 3d video. Lorem ipsum dolor sit amet, consectetur
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr>
+  <section class="space">
+    <!-- <img src="img/particles/p1.svg" class="particle parallax" data-speed="-0.20" style="left: -25px; top: 40%;">
+    <img src="img/particles/p2.svg" class="particle parallax" data-speed="-0.10" style="right: -25px; top: 80%;"> -->
+    <h2 class="text-center">
+        <span class="context parallax animate zoom-up">Modular</span>
+        <span class="parallax animate zoom-up delay-sm">Features</span>
+    </h2>
+    <div class="container stagger left m-t-lg">
+      <div class="column">
+        <h3 class="parallax animate slide-in-right delay-2">
+          Remote Streems
+        </h3>
+        <p class="parallax animate slide-in-right">
+          Our platform uses spacial mapping to recognize objects and allow you to interact
+          with customers with 3d video. Lorem ipsum dolor sit amet, consectetur
+        </p>
+      </div>
+      <div class="column">
+        <img src="img/mockups/mockup_remotestreems.png" alt="" class="fill">
+      </div>
+    </div>
+    <div class="container stagger right m-t-lg">
+      <div class="column">
+        <img src="img/mockups/mockup_onsitestreems.png" alt="" class="fill">
+      </div>
+      <div class="column">
+        <h3 class="parallax animate slide-in-right delay-2">
+          Onsite Streems
+        </h3>
+        <p class="parallax animate slide-in-right">
+          Our platform uses spacial mapping to recognize objects and allow you to interact
+          with customers with 3d video. Lorem ipsum dolor sit amet, consectetur
+        </p>
+      </div>
+    </div>
+    <div class="container stagger left m-t-lg">
+      <div class="column">
+        <h3 class="parallax animate slide-in-right delay-2">
+          Streemshots
+        </h3>
+        <p class="parallax animate slide-in-right">
+          Our platform uses spacial mapping to recognize objects and allow you to interact
+          with customers with 3d video. Lorem ipsum dolor sit amet, consectetur
+        </p>
+      </div>
+      <div class="column">
+        <img src="img/mockups/mockup_streemshots.png" alt="" class="fill">
+      </div>
+    </div>
+  </section>
+  <hr>
+  <section id="section-easy-everyone" class="bleed-device right space-md">
+    <div class="device">
+      <img src="img/mockups/mockup_archiveshare.png">
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-xl-4">
+          <h2 class="parallax animate slide-in-left delay-2">
+            <span class="context">Features</span>
+            Archive, save & share
+          </h2>
+          <p class="m-t-md">
+            Our platform uses spacial mapping to recognize objects and allow you to interact
+            with customers with 3d video.
+          </p>
+      </div>
+    </div>
+  </section>
+  <hr>
+  <section id="section-anywhere" class="space text-center">
+    <h2>
+        <span class="context parallax animate zoom-up">Features</span>
+        <span class="parallax animate zoom-up delay-sm">Anywhere, any industry</span>
+    </h2>
+    <div class="device-fan parallax">
+      <div class="device-fan-wrapper">
+        <img class="fan left two" src="img/mockups/fancard_1.jpg" alt="">
+        <img class="fan left one" src="img/mockups/fancard_2.jpg" alt="">
+        <img class="fan right one" src="img/mockups/fancard_3.jpg" alt="">
+        <img class="fan right two" src="img/mockups/fancard_4.jpg" alt="">
+        
+        <img class="cover" src="img/mockups/mockup_anyindustry_device.png" alt="">
+      </div>
+    </div>
+    <div class="container section-break-sm m-t-md">
+      <p>
+        Our platform uses spacial mapping to recognize objects and allow you to interact
+        with customers
+      </p>
+    </div>
+  </section>
+  <hr>
+  <section id="section-quote">
+    <img src="img/particles/p3.svg" class="particle parallax" data-speed="-0.30" style="left: 720px; top: 60%;">
+    <div class="container">
+      <blockquote class="parallax animate slide-in-left">
+        Pull quote about customer satisfaction goes in this area 
+        here lorem ipsem dolor sit
+      </blockquote>
+      <cite class="parallax animate slide-in-left delay-4">John Williams - CEO Samsung</cite>
+    </div>
+  </section>
+  <hr>
+  <section id="section-sdk" class="space">
+    <div class="container">
+      <h2 class="text-center">
+        <span class="context parallax animate zoom-up">Features</span>
+        <span class="parallax animate zoom-up delay-sm">Easily integrate with our SDK</span>
+      </h2>
+      <div class="row m-t-xxl">
+        <div class="col-md-6">
+          <dl class="nosep">
+            <dt>Web platform</dt>
+            <dd>
+              Our platform uses spacial mapping to recognize objects and allow you to interact with customers with 3d video.
+            </dd>
+            <dt>Native apps</dt>
+            <dd>Our platform uses spacial mapping to recognize objects and allow you to interact with customers with 3d video.</dd>
+            <dt>Modular features</dt>
+            <dd>Our platform uses spacial mapping to recognize objects and allow you to interact with customers with 3d video.</dd>
+          </dl>
+          <a href="#" class="lnk-classy cta" data-modal-show="#modal-request-demo">Demo</a>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-5">
+          <img src="img/diagrams/diag_sdk.png" alt="" class="fill m-t-md">
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr>
+  <section class="space">
+    <div class="container">
+      <img src="img/particles/p1.svg" class="particle parallax" data-speed="-0.10" style="left: 50%; top: 50px; margin-left: -300px">
+      <h2 class="text-center context parallax animate zoom-up">
+          Technical Integration
+      </h2>
+      <table class="m-t-xl">
+        <tbody>
+          <tr>
+            <td>SDK integration with your website</td>
+            <td><img src="img/icons/check.svg" alt=""></td>
+          </tr>
+          <tr>
+            <td>SDK integration with your website</td>
+            <td><img src="img/icons/check.svg" alt=""></td>
+          </tr>
+          <tr>
+            <td>SDK integration with your website</td>
+            <td><img src="img/icons/check.svg" alt=""></td>
+          </tr>
+          <tr>
+            <td>SDK integration with your website</td>
+            <td><img src="img/icons/check.svg" alt=""></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+  <hr>
+  <section class="space">
+    <div class="container section-break">
+      <h2>Interested in Streeming?</h2>
+      <p class="m-t-xl m-b-lg">
+        Our platform uses special mapping to recognize objects and allow you to interact with 
+        customers with 3d video.
+      </p>
+      <a href="#" class="lnk-classy cta" data-modal-show="#modal-request-demo">Demo</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="fcontent">
+      <div class="container">
+        <div class="fcolumn">
+            <div class="h3">Interested in learning more?</div>
+            <div class="h3">
+              <a href="#" data-modal-show="#modal-request-demo">Get in touch</a>
+            </div>
+        </div>
+        <div class="fcolumn right">
+          <div class="flinks">
+              <a href="features.html">Features</a>
+              <a href="about.html">About</a>
+          </div>
+          <div class="flogos">
+              <a href="https://www.linkedin.com/company/streempro/" target="_blank"><img src="img/logos/logo_linkedin.svg" alt="Visit us on LinkedIn"></a>
+              <a href="https://twitter.com/streem_pro" target="_blank"><img src="img/logos/logo_twitter.svg" alt="Visit us on Twitter"></a>
+              <a href="https://www.facebook.com/streempro/" target="_blank"""><img src="img/logos/logo_facebook.svg" alt="Visit us on Facebook"></a>
+          </div>
+        </div>
+      </div>
+      <div class="container m-t-lg">
+        <div class="fcolumn">
+          <div class="fbrand">
+            <a href="/"><img src="img/logos/logo_streem.svg" alt=""></a>
+          </div>
+        </div>
+        <div class="fcolumn right">
+          <address>
+            317 SW Alder St. #1100<br>
+            Portland, OR 97204
+          </address>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <div class="container">&copy; Streem, Inc - All Rights Reserved</div>
+    </div>
+  </footer>
+
+
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>
