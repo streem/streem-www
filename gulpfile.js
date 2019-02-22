@@ -120,16 +120,7 @@ gulp.task('dev', gulp.series(
 
         devServer.init({
             server: distPath,
-            watch: true,
-            rewriteRules: [
-                {
-                    match: /about/,
-                    fn: function(req, res, match) {
-                        return 'dist/about.html';
-                    }
-                    //replace: 'about.html'
-                }
-            ]
+            watch: true
         });
     })
 );

@@ -134,7 +134,11 @@
             for(var i = 0; i < watchedElements.length; i++) {
                 var node = watchedElements[i];
                 var inFocus = false;
-                if (y >= node.scrollStart && y <= node.scrollEnd) {
+
+                var inScrollZone = (y >= node.scrollStart && y <= node.scrollEnd);
+                var isDirty = node.isDirty;
+
+                if (inScrollZone || isDirty) {
                     node.isDirty = true;
                     inFocus = (y >= node.focusStart && y <= node.focusEnd);
                     
@@ -152,18 +156,17 @@
                         node.ele.style.transform = 'translate(0, ' + offset + 'px)';
                     }
 
-                    if (percent > 0) {
-                       
+                    if (percent > 0 || isDirty) {
                         if (node.opacityChange !== 0) {
                             node.ele.className = node.ele.className.replace(/animate/g, '');
                             node.ele.style.opacity = 1.0 + (node.opacityChange * percent);
                         }
                     }
 
-
-                } else if (node.isDirty) {
-                    node.isDirty = false;
-                    node.ele.style.transform = '';
+                    if (isDirty && !inScrollZone) {
+                        node.isDirty = false;
+                        node.ele.style.transform = '';
+                    }
                 }
 
                 focusNode(node, inFocus, true);

@@ -128,6 +128,11 @@ header {
         .streem-logo {
             .logo-mark {
                 fill: #008cff;
+
+                .color-a { fill: url(#logo-grad-a); }
+                .color-b { fill: url(#logo-grad-b); }
+                .color-c { fill: url(#logo-grad-c); }
+                .color-d { fill: #23E5E5; }
             }
 
             .logo-text {
