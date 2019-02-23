@@ -35,7 +35,7 @@
     }
 
     &.zoom-up {
-        transition: transform 500ms ease-out 800ms, opacity 700ms linear 100ms;
+        transition: transform 500ms ease-out, opacity 700ms linear 100ms;
 
         opacity: 0;
         transform: scale(1.2, 1.2) translate(0, 5vh);
@@ -64,6 +64,18 @@
 
         opacity: 0;
         transform: translate(40vw, 0);
+
+        &.reveal {
+            opacity: 1;
+            transform: translate(0, 0);
+        }
+    }
+
+    &.slide-in-up {
+        transition: transform 700ms cubic-bezier(.18,.7,.16,.9), opacity 800ms linear;
+
+        opacity: 0;
+        transform: translate(0, 50px);
 
         &.reveal {
             opacity: 1;
