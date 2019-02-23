@@ -41,7 +41,7 @@ h3, .h3 {
     letter-spacing: -0.81px;
 
     span.context {
-        margin-bottom: 5px;
+        margin-bottom: 0;
     }
 }
 
@@ -83,6 +83,7 @@ p, dl {
 }
 
 blockquote {
+    position: relative;
     font-family: $font-family-header;
     font-size: 2.5rem;
     line-height: 4.25rem;
@@ -90,6 +91,7 @@ blockquote {
     font-weight: bold;
 
     max-width: 675px;
+    z-index: 2;
 
     &::before {
         content: "“";

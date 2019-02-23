@@ -359,8 +359,10 @@ hr {
         }
     }
 
-    dl {    
-        dd {   
+    dl {
+        padding-bottom: 20px;
+        dd {
+            padding-bottom: 20px;
             &+dt {
                 &::before {
                     width: 154px;
