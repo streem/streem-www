@@ -1,6 +1,10 @@
 .particle {
     position: absolute;
     z-index: 0;
+
+    &.foreground {
+        z-index: 25;
+    }
 }
 
 .animate {
