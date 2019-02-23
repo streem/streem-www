@@ -70,11 +70,15 @@ a {
 
     &.intercom-launcher {
         position: fixed;
-        right: 15px;
-        bottom: 15px;
+        right: 0;
+        bottom: 0;
         
         z-index: 45;
     }
+}
+
+.clickable {
+    cursor: pointer;
 }
 
 aside {
@@ -125,6 +129,7 @@ video {
 
     .tab {
         flex: 1 0 0;
+        letter-spacing: 1px;
         text-align: center;
         color: rgba(16, 17, 49, 0.54);
 
@@ -181,8 +186,6 @@ video {
 }
 
 dl {
-    font-size: 1.4rem;
-
     &.nosep {
         dd {
             &+dt {
@@ -235,11 +238,15 @@ dl {
     }
 
     .name {
+        white-space: nowrap;
         font-weight: bold;
         opacity: 0.84;
     }
 
     .role {
+        font-size: 1.08rem;
+        letter-spacing: 1px;
+
         padding-top: 23px;
         opacity: 0.54;
         line-height: 2rem;
@@ -277,7 +284,7 @@ hr {
 
     &.vertical {
         display: block;
-        margin: 80px auto 0 auto;
+        margin: 5% auto 0 auto;
 
         width: 1px;
         height: 57px;
@@ -291,13 +298,6 @@ hr {
 }
 
 @media screen and (min-width: 768px) {
-    a {
-        &.intercom-launcher {
-            right: 65px;
-            bottom: 45px;
-        }
-    }
-
     img,
     video {
         &.fill-sm {

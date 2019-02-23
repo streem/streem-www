@@ -50,7 +50,7 @@ body {
         display: inline-block;
         margin: 10%;
         width: 25%;
-        max-height: 21px;
+        max-height: 18px;
     }
 }
 
@@ -111,9 +111,11 @@ section {
 
         h2 {
             font-size: 4.31rem;
+            line-height: 5rem;
 
             .context {
                 color: rgba(255, 255, 255, 0.74);
+                line-height: 3rem;
             }
         }
     }
@@ -297,6 +299,7 @@ section#section-welcome {
             max-width: 85%;
 
             h1 {
+                padding-top: 30px;
                 padding-bottom: 38px;
 
                 &::before {
@@ -431,7 +434,7 @@ section#section-features-welcome {
 
 section#section-about-welcome {
     h2 {
-        padding-top: 90px;
+        padding-top: 17%;
     }
 }
 
@@ -543,7 +546,12 @@ footer {
         &.space-bottom-lg { padding-top: 400px; }
 
         &.landing {
-            height: 80vh;
+            height: 85vh;
+
+            h2 {
+                font-size: 5.5rem;
+                line-height: 6rem;
+            }
         }
 
         &.landing-overlap {
