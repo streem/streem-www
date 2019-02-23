@@ -1,5 +1,20 @@
 .carousel {
     position: relative;
+    z-index: 10;
+
+    &.chromeless {
+        .carousel-control {
+            display: none;
+        }
+
+        .carousel-content {           
+            .carousel-page {    
+                .text-block {
+                    text-align: left;
+                }
+            }
+        }
+    }
 
     .carousel-content {
         position: relative;

@@ -71,6 +71,14 @@ a {
             }
         }
     }
+
+    &.intercom-launcher {
+        position: fixed;
+        right: 85px;
+        bottom: 85px;
+        
+        z-index: 90;
+    }
 }
 
 aside {
@@ -238,6 +246,9 @@ dl {
     .role {
         padding-top: 23px;
         opacity: 0.54;
+        line-height: 2rem;
+
+        height: 75px;
     }
 }
 

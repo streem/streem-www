@@ -34,8 +34,8 @@ $(function() {
             } else {
 
                 // Find any tabs that control this and update their active state
-                $('[data-carousel-control="' + cid + '"]').removeClass('active');
-                $('[data-carousel-control="' + cid + '"][data-carousel-goto="' + newPage + '"]').addClass('active');
+                $('[data-carousel-control*="' + cid + '"]').removeClass('active');
+                $('[data-carousel-control*="' + cid + '"][data-carousel-goto="' + newPage + '"]').addClass('active');
 
                 var $newPage = $pages.eq(newPage);
 
@@ -57,7 +57,7 @@ $(function() {
                 return false;
             })
             
-            $('body').on('click', '[data-carousel-control="' + cid + '"][data-carousel-goto]', function() {
+            $('body').on('click', '[data-carousel-control*="' + cid + '"][data-carousel-goto]', function() {
                 var $this = $(this);
                 
                 var gotoPage = $this.data('carousel-goto');

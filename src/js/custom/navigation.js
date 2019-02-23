@@ -40,4 +40,9 @@
             $('.mobile-nav').stop().fadeOut();
         }
     });
+
+    $('.intercom-launcher').on('click', function() {
+        Intercom('show');
+        return false;
+    });
 })();

@@ -18,10 +18,13 @@ $(function() {
 
     $(document).on('click', '[data-tab-next]', function() {
         var $tabs = $(this.getAttribute('data-tab-next'));
-        var $active = $tabs.find('.tab.active');//.next('.tab').addClass('ac')
+        var $active = $tabs.find('.tab.active');
 
         $active.removeClass('active');
-        $active.next('.tab').click();
+        
+        var $next = $active.next('.tab');
+        if ($next.length === 0) $next = $active.closest('.tabs').find('.tab:first-child');
+        $next.click();
         
         return false;
     });

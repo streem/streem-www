@@ -100,6 +100,7 @@
     </nav>
     <button class="nav-toggle">Open Menu</button>
   </header>
+  <a href="#" class="intercom-launcher"><img src="img/icons/intercom.svg" alt="Have a question?"></a>
 
   <section id="section-welcome">
     <video muted loop autoplay playsinline>
@@ -148,23 +149,62 @@
               <span class="parallax animate slide-in-left">Reimagining business communications.</span>
             </h3>
             <div id="core-tabs" class="tabs m-t-lg">
-                <a href="#" class="tab active">Video</a>
-                <a href="#" class="tab">AR</a>
-                <a href="#" class="tab">Data</a>
+                <a href="#" class="tab active" data-carousel-goto="0" data-carousel-control="carousel-core-videos|carousel-core-copy">Video</a>
+                <a href="#" class="tab" data-carousel-goto="1" data-carousel-control="carousel-core-videos|carousel-core-copy">AR</a>
+                <a href="#" class="tab" data-carousel-goto="2" data-carousel-control="carousel-core-videos|carousel-core-copy">Data</a>
             </div>
-            <p class="title m-t-lg">
-              View your customers<br>
-              problems in 360
-            </p>
-            <p>
-              Our platform uses spacial mapping to recognize objects and allow you to interact with customers with 3d video.
-            </p>
-            <a href="#" data-tab-next="#core-tabs" class="lnk-classy cta">Next</a>
+            <div class="carousel" id="carousel-core-copy">
+              <div class="carousel-content">
+                <div class="carousel-page">
+                  <p class="title m-t-lg">
+                    View your customers<br>
+                    problems in 360
+                  </p>
+                  <p>
+                    Our platform uses spacial mapping to recognize objects and allow you to interact with customers with 3d video.
+                  </p>
+                  <a href="#" data-tab-next="#core-tabs" class="lnk-classy cta">Next</a>
+                </div>
+                <div class="carousel-page">
+                  <p class="title m-t-lg">
+                    Point at things with magic
+                  </p>
+                  <p>
+                    You can point things out over the internet.
+                  </p>
+                  <a href="#" data-tab-next="#core-tabs" class="lnk-classy cta">Next</a>
+                </div>
+                <div class="carousel-page">
+                  <p class="title m-t-lg">
+                    Get all the data
+                  </p>
+                  <p>
+                    Receive data directly from your customers to figure it all out.
+                  </p>
+                </div>
+              </div>
+            </div>
         </div>
         <div class="col-md-6">
-          <video class="device-framed-video" muted loop autoplay playsinline>
-            <source src="video/mockup_core_video.mp4" type="video/mp4">
-          </video>
+          <div class="carousel chromeless" id="carousel-core-videos">
+            <div class="carousel-content">
+              <div class="carousel-page">
+                <video class="device-framed-video" preload="auto" muted loop autoplay playsinline>
+                  <source src="video/mockup_core_video.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="carousel-page">
+                <video class="device-framed-video" preload="auto" muted loop autoplay playsinline>
+                  <source src="video/mockup_core_ar.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="carousel-page">
+                <video class="device-framed-video" preload="auto" muted loop autoplay playsinline>
+                  <source src="video/mockup_core_data.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
           <!-- <img class="device-framed-video" src="img/device_frame_shadow.png" alt=""> -->
         </div>
       </div>
@@ -194,7 +234,7 @@
     <div class="container stagger">
       <div class="column">
         <div class="perspective-wrapper parallax">
-            <img src="img/mockups/supoprtimage.jpg" alt="" class="fill">
+            <img src="img/mockups/usecase_service.jpg" alt="" class="fill">
         </div>
       </div>
       <div class="column">
@@ -219,14 +259,14 @@
       </div>
       <div class="column">
         <div class="perspective-wrapper parallax">
-          <img src="img/mockups/insurance.jpg" alt="" class="fill">
+          <img src="img/mockups/usecase_insurance.jpg" alt="" class="fill">
         </div>
       </div>
     </div>
     <div class="container stagger">
       <div class="column">
         <div class="perspective-wrapper parallax">
-          <img src="img/mockups/homeinspection.jpg" alt="" class="fill">
+          <img src="img/mockups/usecase_homeinspection.jpg" alt="" class="fill">
         </div>
       </div>
       <div class="column">
@@ -251,7 +291,7 @@
       </div>
       <div class="column">
         <div class="perspective-wrapper parallax">
-          <img src="img/mockups/expertise.jpg" alt="" class="fill">
+          <img src="img/mockups/usecase_expertise.jpg" alt="" class="fill">
         </div>
       </div>
     </div>
@@ -372,7 +412,16 @@
 
   <section id="section-easy-everyone" class="bleed-device right space-lg">
     <div class="device">
-      <img src="img/mockups/easyforeveryone.png">
+      <div class="carousel" id="carousel-foreveryone-mockups">
+        <div class="carousel-content">
+          <div class="carousel-page">
+            <img src="img/mockups/mockup_forcustomers.png" alt="">
+          </div>
+          <div class="carousel-page">
+              <img src="img/mockups/mockup_forbusiness.png" alt="">
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="container">
@@ -382,8 +431,8 @@
             Easy for customers &amp; businesses
           </h3>
           <div id="core-tabs" class="tabs m-t-lg">
-            <a href="#" class="tab active">For Customers</a>
-            <a href="#" class="tab">For Pros</a>
+            <a href="#" class="tab active" data-carousel-goto="0" data-carousel-control="carousel-foreveryone-mockups">For Customers</a>
+            <a href="#" class="tab" data-carousel-goto="1" data-carousel-control="carousel-foreveryone-mockups">For Pros</a>
           </div>
           <p class="m-t-md parallax animate slide-in-left">
             <dl>
