@@ -116,6 +116,12 @@ img {
     }
 }
 
+// Shrink wraps an image so you can layout absolute items relative to image
+.img-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
 video {
     &.fill,
     &.fill-sm {

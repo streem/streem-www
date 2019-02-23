@@ -86,6 +86,15 @@
 
 span.parallax { position: relative; display: block; }
 
-// .focus {
-//     outline: solid 1px red;
-// }
+@media screen and (max-width: 480px) {
+    $zoom-factor: 0.6;
+    .particle {
+        zoom: $zoom-factor;
+
+        &.zoom-5 { zoom: 0.5 * $zoom-factor; }
+        &.zoom-6 { zoom: 0.6 * $zoom-factor; }
+        &.zoom-7 { zoom: 0.7 * $zoom-factor; }
+        &.zoom-8 { zoom: 0.8 * $zoom-factor; }
+        &.zoom-9 { zoom: 0.9 * $zoom-factor; }
+    }
+}

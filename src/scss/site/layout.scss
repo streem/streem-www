@@ -130,6 +130,14 @@ section {
             max-width: 90%;
             margin: 0 auto;
         }
+
+        .img-wrapper {
+            max-width: 90%;
+
+            img {
+                max-width: 100%;
+            }
+        }
     }
 
     .container {
@@ -552,6 +560,14 @@ footer {
             margin-top: -176px;
             img {
                 max-width: 72%;
+            }
+
+            .img-wrapper {
+                max-width: 72%;
+    
+                img {
+                    max-width: 100%;
+                }
             }
         }
 
