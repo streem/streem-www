@@ -74,8 +74,8 @@ a {
 
     &.intercom-launcher {
         position: fixed;
-        right: 85px;
-        bottom: 85px;
+        right: 15px;
+        bottom: 15px;
         
         z-index: 90;
     }
@@ -295,6 +295,12 @@ hr {
 }
 
 @media screen and (min-width: 768px) {
+    a {
+        &.intercom-launcher {
+            right: 65px;
+            bottom: 45px;
+        }
+    }
 
     img,
     video {

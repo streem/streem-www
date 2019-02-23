@@ -141,8 +141,13 @@ section {
         }
 
         &.stagger {
-
+            display: flex;
+            flex-flow: column;
             margin-top: 200px;
+
+            &.alt {
+                flex-direction: column-reverse;
+            }
 
             .column {
                 text-align: center;
@@ -208,6 +213,16 @@ section {
                         &.focus {
                             transform:  rotateY(-20deg) rotateX(7deg); 
                         }
+                    }
+                }
+            }
+
+            &.alt {
+                .column {
+                    margin-top: 120px;
+
+                    &+.column {
+                        margin-top: 0;
                     }
                 }
             }
@@ -572,9 +587,21 @@ footer {
 
         .container {
             &.stagger {
-                display: flex;
+                flex-flow: row;
                 align-items: center;
                 justify-content: space-between;
+
+                &.alt {
+                    flex-direction: inherit;
+
+                    .column {
+                        margin-top: 0;
+    
+                        &+.column {
+                            margin-top: 0;
+                        }
+                    }
+                }
 
                 .column {
                     text-align: left;
