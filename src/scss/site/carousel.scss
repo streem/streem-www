@@ -38,6 +38,7 @@
     .carousel-control {
         position: absolute;
         top: 55%;
+        z-index: 50;
 
         &.left {
             left: -50px;

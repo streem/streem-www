@@ -195,6 +195,8 @@ section {
                     position: relative;
                     transform-style: preserve-3d;
                     transition: transform .8s ease-out;
+
+                    margin: 0 auto 0 25px;
                     
                     &.focus {
                         transform:  rotateY(24deg) rotateX(4deg);
@@ -236,8 +238,7 @@ section {
                     }
 
                     .perspective-wrapper {
-                        margin: 0 auto 0 30px;
-
+                        margin: 0 25px 0 auto;
                         &.focus {
                             transform:  rotateY(-20deg) rotateX(7deg); 
                         }
@@ -409,7 +410,7 @@ section#section-core {
         position: relative;
         margin-left: -3%;
         margin-top: 50px;
-        width: 97%;
+        width: 130%;
     }
 }
 
@@ -423,7 +424,13 @@ section#section-demo {
 }
 
 section#section-communicate {
-    padding: 200px 0;
+    padding-top: 100px; 
+    padding-bottom: 200px;
+}
+
+section#section-under-hood {
+    padding: 50px 0;
+    margin-top: 200px;
 }
 
 section#section-vision {
@@ -677,6 +684,8 @@ footer {
                         transform-style: preserve-3d;
     
                         transition: transform .8s ease-out;
+
+                        margin: 0 auto;
                         
                         &.focus {
                             transform:  rotateY(24deg) rotateX(4deg);
@@ -705,6 +714,7 @@ footer {
     
                         .perspective-wrapper {
                             float: right;
+                            margin: 0 auto;
     
                             &.focus {
                                 transform:  rotateY(-20deg) rotateX(7deg); 
@@ -788,6 +798,7 @@ footer {
             right: -33%;
             margin-top: 0;
             margin-left: 0;
+            width: 97%;
 
             z-index: 5;
         }
