@@ -1,16 +1,25 @@
-@keyframes header-line-slide-in {
-    0%   {
-        background-color: transparent; 
-        left: 0;
-        width: 0;
+@keyframes scroll-indicator {
+    0% {
+        background-position: 0 100%;
     }
-    50%  {
-        left: 0;
-        width: 60%;    
-    }
+
     100% {
-        left: 40%;
-        width: 20%;
-        background-color: #fff;
+        background-position: 0 -100%;
     }
-  }
+}
+
+.anim-scroll-indicator {
+    background-position: -100%;
+    
+    animation-duration: 2.25s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: scroll-indicator;
+
+    animation-delay: 1.2s;
+
+    background-color: transparent !important;
+    background: linear-gradient(180deg, currentColor 50%, transparent 0);
+    background-size: 100% 200%;
+    background-position: 0 100%;
+}
