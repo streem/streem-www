@@ -21,3 +21,16 @@ Deploying with Netlify is a breeze, however, you do need to remember to configur
 
 This ensures that Netlify will build the newest version of the site when deployment occurs and targets the output from that build process and the root path of the site.
 
+## Browser Testing
+This section is to keep track of what browser testing has been performed and when.
+
+Browser  |Device/OS   |Version    |Last Tested|Notes
+---------|------------|-----------|-----------|-----
+Safari   |iPad        |12.1.4     |2/24/2019  |
+Chrome   |iPhone X    |72 (12.0.1)|2/24/2019  | Portrait looks great but landscape experience could be better.
+Safari   |iPhone X    |12.0.1     |2/24/2019  | Portrait looks great but landscape experience could be better.
+Chrome   |Windows 10  |72         |2/24/2019  |
+Firefox  |Windows 10  |65         |2/24/2019  |
+Edge     |Windows 10  |42 (17)    |2/24/2019  | A few minor animation bugs that could be cleaned up.
+IE       |Windows 10  |11         |2/24/2019  | Minor bug with black bars around video on homepage.
+
