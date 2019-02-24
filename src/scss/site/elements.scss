@@ -133,27 +133,29 @@ video {
 .tabs {
     display: flex;
 
+    $tab-bottom-padding: 18px;
+
     .tab {
         flex: 1 0 0;
         letter-spacing: 1px;
         text-align: center;
         color: rgba(16, 17, 49, 0.54);
 
-        padding: 0 0 18px 0;
+        padding: 0 0 $tab-bottom-padding 0;
         border-bottom: 1px solid rgba(16, 17, 49, 0.54);
 
         &:first-child {
             text-align: left;
-            padding: 0 0 18px 0;
+            padding: 0 0 $tab-bottom-padding 0;
         }
 
         &:last-child {
             text-align: right;
-            padding: 0 0 18px0 ;
+            padding: 0 0 $tab-bottom-padding 0 ;
         }
 
         &::after {
-            margin-top: 0;
+            margin-top: -4px;
             height: 5px;
             
         }
@@ -179,6 +181,7 @@ video {
             display: block;
 
             &::after {
+                margin-top: 0;
                 height: 3px;
             }
         }
