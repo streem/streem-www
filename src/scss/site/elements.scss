@@ -329,18 +329,18 @@ hr {
 
     .tabs {
         display: block;
-
+        
         .tab {
             float: left;
             display: block;
-            padding: 0 8% 18px 8%;
+            padding: 0 7% 18px 7%;
     
             &:first-child {
-                padding: 0 16% 18px 0;
+                padding: 0 14% 18px 0;
             }
     
             &:last-child {
-                padding: 0 0 18px 16%;
+                padding: 0 0 18px 14%;
             }
         }
 
