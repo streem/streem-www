@@ -586,6 +586,12 @@ footer {
             padding-top: 180px;
         }
 
+        &.bleed-device {   
+            p {
+                text-align: left;
+            }
+        }
+
         &.space { padding: 200px 0; }
         &.space-top { padding-top: 200px; }
         &.space-bottom { padding-top: 200px; }
