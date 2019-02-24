@@ -42,7 +42,7 @@
         transition: transform 500ms ease-out, opacity 700ms linear 100ms;
 
         opacity: 0;
-        transform: scale(1.2, 1.2) translate(0, 5vh);
+        transform: scale(1.2, 1.2) translate(0, 100px);
     
         &.reveal {
             opacity: 1;
