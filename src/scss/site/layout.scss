@@ -272,7 +272,7 @@ section {
         font-size: 1.4rem;
         text-align: center;
 
-        padding-top: 180px;
+        padding-top: 120px;
     }
 
     &.bleed-device {
@@ -581,6 +581,10 @@ footer {
     }
 
     section {
+        .tail {
+            padding-top: 180px;
+        }
+
         &.space { padding: 200px 0; }
         &.space-top { padding-top: 200px; }
         &.space-bottom { padding-top: 200px; }
