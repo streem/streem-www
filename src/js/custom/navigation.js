@@ -3,7 +3,7 @@
     var isNavPinned = false;
 
     function refreshPinState() {
-        var y = window.scrollY;
+        var y = window.scrollY || document.documentElement.scrollTop;
         if (y > pinThreshold && !isNavPinned) {
             isNavPinned = true;
             $('header').addClass('pin');

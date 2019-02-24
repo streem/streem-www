@@ -4,12 +4,15 @@
     var watchedGroups = null;
 
     function getBounds( el ) {
-        var bounds = el.getBoundingClientRect();
-        bounds.top -= window.scrollY;
-        bounds.left -= window.scrollX;
+        var sy = window.scrollY || document.documentElement.scrollTop;
+        var sx = window.scrollX || document.documentElement.scrollLeft;
 
-        var _y = bounds.top + window.scrollY;
-        var _x = bounds.left + window.scrollX;
+        var bounds = el.getBoundingClientRect();
+        bounds.top -= sy;
+        bounds.left -= sx;
+
+        var _y = bounds.top + sy;
+        var _x = bounds.left + sx;
         
         var width = el.offsetWidth;
         var height = el.offsetHeight;
@@ -129,7 +132,7 @@
 
     function updateElements() {
         if (watchedElements != null) {
-            var y = window.scrollY;
+            var y = window.scrollY || document.documentElement.scrollTop;
 
             for(var i = 0; i < watchedElements.length; i++) {
                 var node = watchedElements[i];

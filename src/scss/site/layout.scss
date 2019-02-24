@@ -203,11 +203,13 @@ section {
                     video {
                         position: relative;
                         width: 100%;
-
-                        z-index: 5;
                     }
 
-                    &::after {
+                    img, video {
+                        z-index: 20;
+                    }
+
+                    &::before {
                        content: " ";
 
                        display: block;
@@ -311,7 +313,7 @@ section#section-welcome {
         width: 100%;
         top: 100%;
 
-        margin-top: -7vw;
+        margin-top: -6vw;
 
         z-index: 20;
     }
