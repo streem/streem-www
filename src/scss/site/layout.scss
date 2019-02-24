@@ -69,7 +69,13 @@ hr {
 
 .container-medium {
     width: 70%;
-    max-width: 1024px;
+    max-width: 990px;
+    margin: 0 auto;
+}
+
+.container-large {
+    width: 70%;
+    max-width: 1160px;
     margin: 0 auto;
 }
 
@@ -159,7 +165,7 @@ section {
         &.stagger {
             display: flex;
             flex-flow: column;
-            margin-top: 200px;
+            margin-top: 100px;
 
             &.alt {
                 flex-direction: column-reverse;
@@ -167,6 +173,10 @@ section {
 
             .column {
                 text-align: center;
+
+                h3 {
+                    padding-bottom: 10px;
+                }
 
                 p {
                     margin-top: 15px;
@@ -295,6 +305,17 @@ section#section-welcome {
 
     height: 650px;
 
+    .intro-arc {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        top: 100%;
+
+        margin-top: -7vw;
+
+        z-index: 20;
+    }
+
     .content-overlay {
         display: flex;
         justify-content: space-around;
@@ -378,25 +399,6 @@ section#section-welcome {
 
         transform: translate(-50%, -50%);
     }
-
-    &::after {
-        content: " ";
-
-        position: absolute;
-
-        top: 100%;
-        margin-top: -6vw;
-        left: 0px;
-        margin-left: -75vw;
-        
-        width: 250vw;
-        height: 135vw;
-        
-        background: #fff;
-        border-radius: 50%;
-
-        z-index: 1;
-    }
 }
 
 section#section-core {
@@ -404,7 +406,7 @@ section#section-core {
         position: relative;
         margin-left: -3%;
         margin-top: 50px;
-        width: 100%;
+        width: 97%;
     }
 }
 
@@ -559,6 +561,15 @@ footer {
         }
     }
 
+    section#section-tech {
+        video.fill {
+            display: block;
+            margin: 0 auto;
+            width: 70%;
+            
+        }
+    }
+
     section {
         &.space { padding: 200px 0; }
         &.space-top { padding-top: 200px; }
@@ -577,7 +588,8 @@ footer {
         }
 
         &.landing-overlap {
-            margin-top: -176px;
+            margin-top: -120px;
+
             img {
                 max-width: 72%;
             }

@@ -29,6 +29,7 @@ $(function() {
         function loadPage(newPage, oldPage) {
             if (oldPage >= 0 && oldPage < $pages.length) {
                 $pages.eq(oldPage).stop().fadeOut(function() {
+                    $(this).find('.animate.reveal').removeClass('reveal');
                     loadPage(newPage);
                 });
             } else {
@@ -41,7 +42,9 @@ $(function() {
 
                 // Change our page and update height
                 preparePageElements($newPage);
-                $newPage.stop().fadeIn();
+                $newPage.stop().fadeIn(function() {
+                    $newPage.find('.animate').addClass('reveal');
+                });
             }
         }
 
