@@ -38,6 +38,15 @@
         }
     }
 
+    &.slide-onscreen-bottom {
+        transition: transform 1000ms ease-out;
+        transform: translate(0, 1200px);
+
+        &.reveal {
+            transform: translate(0, 0);
+        }
+    }
+
     &.zoom-up {
         transition: transform 500ms ease-out, opacity 700ms linear 100ms;
 

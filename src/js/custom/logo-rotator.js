@@ -1,7 +1,7 @@
 $(function() {
     var logosPerPage = 4;
     var staggerDelay = 400;
-    var pageDelay = 6000;
+    var pageDelay = 5000;
     var duration = 500;
 
     // Find all of our auto-rotating logo lists on the page
