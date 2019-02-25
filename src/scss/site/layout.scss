@@ -422,11 +422,16 @@ section#section-press {
 }
 
 section#section-demo {
+    padding-top: 128px;
     padding-bottom: 300px;
 }
 
+section#section-flexibility {
+    padding-bottom: 128px;
+}
+
 section#section-business-apart {
-    padding: 250px 0;
+    padding: 200px 0;
 }
 
 section#section-communicate {
@@ -435,8 +440,7 @@ section#section-communicate {
 }
 
 section#section-under-hood {
-    padding: 50px 0;
-    margin-top: 200px;
+    padding: 128px 0;
 }
 
 section#section-vision {
@@ -807,6 +811,10 @@ footer {
             margin: 3.5%;
             max-height: inherit;
         }
+    }
+
+    #carousel-foreveryone-text {
+        padding-right: 80px;
     }
 
     section {
