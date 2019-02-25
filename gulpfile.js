@@ -34,6 +34,10 @@ const fontWatchPaths = [ srcRoot + 'assets/fonts/**/*.*' ];
 const fontCopyPaths = [ srcRoot + 'assets/fonts/**/*.*' ];
 const fontOutputPath = distPath + 'fonts/';
 
+const rootAssetWatchPaths = [ srcRoot + 'assets/root/**/*.*' ];
+const rootAssetCopyPaths = [ srcRoot + 'assets/root/**/*.*' ];
+const rootAssetOutputPath = distPath;
+
 // Working variables
 var devServer = browserSync.create();
 
@@ -102,6 +106,11 @@ gulp.task('build-fonts', function() {
         .pipe(gulp.dest(fontOutputPath));
 });
 
+gulp.task('build-root', function() {
+    return gulp.src(rootAssetCopyPaths)
+        .pipe(gulp.dest(rootAssetOutputPath));
+});
+
 gulp.task('clean-dist', function() {
     return del([
         distPath + '**'
@@ -109,7 +118,7 @@ gulp.task('clean-dist', function() {
 });
 
 gulp.task('dev', gulp.series(
-    'build-styles-fast', 'build-scripts-fast', 'build-html', 'build-images', 'build-videos', 'build-fonts',
+    'build-styles-fast', 'build-scripts-fast', 'build-html', 'build-images', 'build-videos', 'build-fonts', 'build-root',
     function dev () {
         gulp.watch(styleWatchPaths, gulp.series('build-styles-fast'));
         gulp.watch(scriptWatchPaths, gulp.series('build-scripts'));
@@ -117,6 +126,7 @@ gulp.task('dev', gulp.series(
         gulp.watch(imgWatchPaths, gulp.parallel('build-images'));
         gulp.watch(videoWatchPaths, gulp.parallel('build-videos'));
         gulp.watch(fontWatchPaths, gulp.parallel('build-fonts'));
+        gulp.watch(rootAssetWatchPaths, gulp.parallel('build-root'));
 
         devServer.init({
             server: distPath,
@@ -125,4 +135,4 @@ gulp.task('dev', gulp.series(
     })
 );
 
-gulp.task('build', gulp.series('clean-dist', 'build-styles', 'build-scripts', 'build-html', 'build-images', 'build-videos'));
+gulp.task('build', gulp.series('clean-dist', 'build-styles', 'build-scripts', 'build-html', 'build-images', 'build-videos', 'build-root', 'build-fonts'));
