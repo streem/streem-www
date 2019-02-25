@@ -576,7 +576,7 @@ footer {
     }
 
     section#section-business-apart {
-        padding: 200px 0;
+        padding: 130px 0 200px 0;
     }
 
     section#section-features-modular {
@@ -585,7 +585,18 @@ footer {
         }
     }
 
+    section#section-communicate {
+        padding-top: 60px; 
+        padding-bottom: 150px;
+    }
+
+    section#section-core {
+        padding-top: 30px;
+    }
+
     section#section-tech {
+        padding-top: 100px;
+        
         video.fill {
             display: block;
             margin: 0 auto;
