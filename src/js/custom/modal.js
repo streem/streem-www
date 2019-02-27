@@ -1,3 +1,9 @@
+window.showModal = function($modal) {
+    $modal.addClass('show').hide().fadeIn(function() {
+        $(this).find('.animate').addClass('reveal');
+    });
+}
+
 $(function() {
     $('body')
         .on('click', '[data-modal-close]', function() {
@@ -5,9 +11,11 @@ $(function() {
             return false;
         })
         .on('click', '[data-modal-show]', function() {
-            $($(this).data('modal-show')).addClass('show').hide().fadeIn(function() {
-                $(this).find('.animate').addClass('reveal');
-            });
+            showModal($($(this).data('modal-show')));
             return false;
         });
+
+    $('.modal[data-show]').each(function() {
+        showModal($(this));
+    })
 });
