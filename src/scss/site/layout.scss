@@ -89,11 +89,11 @@ section {
     position: relative;
     overflow: visible;
 
-    padding: 100px 0;
+    padding: 75px 0;
 
     &.space { padding: 100px 0; }
     &.space-top { padding-top: 100px; }
-    &.space-bottom { padding-top: 100px; }
+    &.space-bottom { padding-bottom: 100px; }
 
     &.space-md { padding: 150px 0; }
     &.space-top-md { padding-top: 150px; }
@@ -415,30 +415,14 @@ section#section-core {
         margin-left: -3%;
         margin-top: 50px;
         width: 130%;
+
+        margin-bottom: -30%;
     }
 }
 
 section#section-press {
     display: flex;
     justify-content: space-between;
-}
-
-section#section-demo {
-    padding-top: 128px;
-    padding-bottom: 300px;
-}
-
-section#section-flexibility {
-    padding-bottom: 128px;
-}
-
-section#section-business-apart {
-    padding: 200px 0;
-}
-
-section#section-communicate {
-    padding-top: 100px; 
-    padding-bottom: 200px;
 }
 
 section#section-under-hood {
@@ -449,10 +433,6 @@ section#section-vision {
     .row > div {
         margin-top: 55px;
     }
-}
-
-section#section-tech {
-    padding-bottom: 150px;
 }
 
 section#section-anywhere {
@@ -577,33 +557,17 @@ footer {
         height: 98vh;
     }
 
-    section#section-business-apart {
-        padding: 130px 0 200px 0;
-    }
-
     section#section-features-modular {
         .container {
             margin-top: 75px;
         }
     }
 
-    section#section-communicate {
-        padding-top: 60px; 
-        padding-bottom: 150px;
-    }
-
-    section#section-core {
-        padding-top: 30px;
-    }
-
-    section#section-tech {
-        padding-top: 100px;
-        
+    section#section-tech {       
         video.fill {
             display: block;
             margin: 0 auto;
             width: 70%;
-            
         }
     }
 
@@ -612,15 +576,9 @@ footer {
             padding-top: 180px;
         }
 
-        &.bleed-device {   
-            p {
-                text-align: left;
-            }
-        }
-
-        &.space { padding: 200px 0; }
-        &.space-top { padding-top: 200px; }
-        &.space-bottom { padding-top: 200px; }
+        &.space { padding: 175px 0; }
+        &.space-top { padding-top: 175px; }
+        &.space-bottom { padding-top: 175px; }
 
         &.space-md { padding: 300px 0; }
         &.space-top-md { padding-top: 300px; }
@@ -831,9 +789,28 @@ footer {
     }
 
     section {
-        &.bleed-device {   
+        &.bleed-device {
+
+            margin: 4vw 0;
+
             h3, p {
                 text-align: left;
+            }
+
+            .container {
+                height: 100%;
+            }
+
+            .content {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
             }
 
             .device {
@@ -849,7 +826,7 @@ footer {
 
                 padding-bottom: 0;
     
-                img {
+                video, img {
                     width: 100%;
                     height: auto;
                 }
