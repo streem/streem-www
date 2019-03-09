@@ -298,6 +298,10 @@ hr {
         width: 1px;
         height: 57px;
     }
+
+    &.mobile-only {
+        margin: 50px auto;
+    }
 }
 
 .landing {

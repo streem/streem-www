@@ -89,7 +89,7 @@ section {
     position: relative;
     overflow: visible;
 
-    padding: 75px 0;
+    padding: 50px 0;
 
     &.space { padding: 100px 0; }
     &.space-top { padding-top: 100px; }
@@ -425,10 +425,6 @@ section#section-press {
     justify-content: space-between;
 }
 
-section#section-under-hood {
-    padding: 128px 0;
-}
-
 section#section-vision {
     .row > div {
         margin-top: 55px;
@@ -575,6 +571,8 @@ footer {
         .tail {
             padding-top: 180px;
         }
+
+        padding: 75px 0;
 
         &.space { padding: 175px 0; }
         &.space-top { padding-top: 175px; }
