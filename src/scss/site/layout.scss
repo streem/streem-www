@@ -59,9 +59,13 @@ body {
         height: auto;
         max-height: 18px;
 
+        text, path {
+            transition: fill 200ms linear;
+        }
+
         &:hover {
             text, path {
-                fill: #222;
+                fill: #1a1a1a;
             }
         }
     }
