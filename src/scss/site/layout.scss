@@ -48,11 +48,22 @@ body {
 
     margin: 0 -3.5%;
 
-    img {
+    img, a {
         display: inline-block;
         margin: 10%;
         width: 25%;
+    }
+
+    img, svg {
+        width: 100%;
+        height: auto;
         max-height: 18px;
+
+        &:hover {
+            text, path {
+                fill: #222;
+            }
+        }
     }
 }
 
@@ -540,9 +551,12 @@ footer {
     }
 
     .image-list {
-        img {
+        img, a {
             width: 25%;
             margin: 3.5%;
+        }
+
+        img, svg {
             max-height: 40px;
         }
     }
@@ -775,9 +789,12 @@ footer {
     }
 
     .image-list {
-        img {
+        img, a {
             width: auto;
             margin: 3.5%;
+        }
+
+        img, svg {
             max-height: inherit;
         }
     }
