@@ -296,7 +296,7 @@ section {
     &.bleed-device {
         position: relative;
 
-        h2, p {
+        h2, h3, p {
             text-align: center;
         }
 
@@ -794,12 +794,12 @@ footer {
 
     .image-list {
         img, a {
-            width: auto;
-            margin: 3.5%;
+            width: 12%;
+            margin: 1%;
         }
 
         img, svg {
-            max-height: inherit;
+            max-height: 30px;
         }
     }
 
@@ -812,7 +812,7 @@ footer {
 
             margin: 4vw 0;
 
-            h2, p {
+            h2, h3, p {
                 text-align: left;
             }
 
