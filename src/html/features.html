@@ -64,10 +64,14 @@
           <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
             <input type="hidden" name="oid" value="00D6A000001i8ic">
             <input type="hidden" id="retURL" name="retURL" value="https://streem.pro?submit=true">
-            <input type="text" placeholder="First name" id="first_name" name="first_name" maxlength="40">
-            <input type="text" placeholder="Last name" id="last_name" name="last_name" maxlength="80">
-            <input type="text" placeholder="Company" id="company" name="company" maxlength="40">
-            <input type="text" placeholder="Email address" id="email" name="email" maxlength="80">
+            <input type="text" placeholder="First name*" id="first_name" name="first_name" maxlength="40" required>
+            <input type="text" placeholder="Last name*" id="last_name" name="last_name" maxlength="80" required>
+            <input type="text" placeholder="Email address*" id="email" name="email" maxlength="80" required>
+            <input type="text" placeholder="Phone" id="phone" name="phone" maxlength="80">
+            <input type="text" placeholder="Company*" id="company" name="company" maxlength="80" required>
+            <input type="text" placeholder="State/Province" id="state" name="state/province" maxlength="80">
+            <input type="text" placeholder="Country*" id="country" name="country" maxlength="80" required>
+            <input type="text" placeholder="Industry" id="industry" name="industry" maxlength="80">
             <button type="submit" class="btn btn-hero m-t-sm">Demo</button>
           </form>
           <aside>* we won't share your information</aside>

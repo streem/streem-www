@@ -8,7 +8,7 @@
   <meta name="description"content="Streem combines video, augmented reality, and artificial intelligence in a revolutionary communication platform." />
 
   <meta charset="utf-8">
-  <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8" />
+  <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
 
   <meta property="og:title" content="Streem" />
   <meta property="og:type" content="website" />
@@ -63,10 +63,14 @@
           <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
             <input type="hidden" name="oid" value="00D6A000001i8ic">
             <input type="hidden" id="retURL" name="retURL" value="https://streem.pro?submit=true">
-            <input type="text" placeholder="First name" id="first_name" name="first_name" maxlength="40">
-            <input type="text" placeholder="Last name" id="last_name" name="last_name" maxlength="80">
-            <input type="text" placeholder="Company" id="company" name="company" maxlength="40">
-            <input type="text" placeholder="Email address" id="email" name="email" maxlength="80">
+            <input type="text" placeholder="First name*" id="first_name" name="first_name" maxlength="40" required>
+            <input type="text" placeholder="Last name*" id="last_name" name="last_name" maxlength="80" required>
+            <input type="text" placeholder="Email address*" id="email" name="email" maxlength="80" required>
+            <input type="text" placeholder="Phone" id="phone" name="phone" maxlength="80"> 
+            <input type="text" placeholder="Company*" id="company" name="company" maxlength="80" required>
+            <input type="text" placeholder="State/Province" id="state" name="state/province" maxlength="80">
+            <input type="text" placeholder="Country*" id="country" name="country" maxlength="80" required>
+            <input type="text" placeholder="Industry" id="industry" name="industry" maxlength="80">
             <button type="submit" class="btn btn-hero m-t-sm">Demo</button>
           </form>
           <aside>* we won't share your information</aside>
@@ -401,8 +405,6 @@
             href="https://frontdoor.jobs/portland-or/software-engineering-manager/49C4D4AF764F41AD8D00F65785409D21/job/">Software
             Engineering Manager</a></strong></p>
       <p><strong><a href="https://frontdoor.jobs/portland-or/customer-success-manager/8676A60874074D8D86560103637AEF82/job/">Customer Success Manager</a></strong></p>
-      <p><strong><a href="https://frontdoor.jobs/portland-or/office-admin/00FF4FEC00724AF38F9B9DAA95FD567D/job/">Office
-            Admin</a></strong></p>
       <a href="mailto:careers@streem.pro?subject=Interested in joining Streem" class="lnk-classy cta">Get in touch</a>
     </div>
   </section>
