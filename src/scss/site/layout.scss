@@ -328,6 +328,20 @@ section#section-welcome {
 
     height: 650px;
 
+    &::before {
+        content: " ";
+
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+
+        height: 150px;
+
+        background: linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 100%);
+        z-index: 1;
+    }
+
     .intro-arc {
         position: absolute;
         left: 0;
