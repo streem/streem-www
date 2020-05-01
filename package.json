@@ -5,7 +5,7 @@
     "gulp": "*",
     "gulp-autoprefixer": "*",
     "gulp-clean-css": "*",
-    "gulp-sass": "^3.1.0",
+    "gulp-sass": "^3.0.0",
     "gulp-concat": "*",
     "gulp-watch": "*",
     "gulp-uglify": "*",
