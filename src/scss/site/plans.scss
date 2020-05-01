@@ -1,0 +1,101 @@
+.plan-block {
+    .container {
+        position: relative;
+
+        .background-mesh {
+            position: absolute;
+            left: -25%;
+            top: -10%;
+            width: auto;
+            height: 100%;
+
+            z-index: 0;
+
+            &+.background-mesh {
+                left: auto;
+                right: -25%;
+                top: auto;
+                bottom: -15%;
+            }
+        }
+
+        .card {
+            position: relative;           
+
+            display: inline-block;
+            vertical-align: top;
+            width: 45%;
+
+            &+.card {
+                margin-left: 5%;
+            }
+
+            .content {
+                position: relative;
+                z-index: 1;
+
+                padding: 30px;
+
+                background: #FEFEFE;
+
+                border-radius: 4px;
+                
+            }
+
+            &:before {
+                display: block;
+                content: " ";
+
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+
+                margin: -2px;
+
+                background: #1299F2;
+                background-image: linear-gradient(to left, #23e5e5, #004dff);
+
+                border-radius: 4px;
+
+                z-index: -1;
+
+            }
+
+            ul {
+                padding: 50px 0 50px 60px;
+
+                li {
+                    position: relative;
+
+                    font-size: 18px;
+                    line-height: 25px;
+
+                    &+li {
+                        margin-top: 20px;
+                    }
+
+                    &:before {
+                        display: block;
+                        content: " ";
+
+                        position: absolute;
+                        left: -50px;
+                        bottom: 4px;
+
+                        width: 11px;
+                        height: 17px;
+
+                        background: url("img/icons/feature_check.svg") center center no-repeat;
+                    }
+                }
+            }
+
+            .button-container {
+                text-align: center;
+                padding: 40px 0;
+            }
+        }
+    }
+}
