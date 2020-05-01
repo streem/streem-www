@@ -1,2 +1,3 @@
 /about /about.html 200
-/features /features.html 200
+/products /products.html 200
+/features /products 301
