@@ -468,7 +468,9 @@ section#section-anywhere {
 
 section#section-features-welcome {
     h2 {
-        padding-bottom: 25px;
+        font-size: 3rem;
+        line-height: 3rem;
+        padding: 0 15px 25px 15px;
     }
 }
 
@@ -844,6 +846,16 @@ footer {
                 height: 100px;
                 background-color: #d8d8d8;
             }
+        }
+    }
+
+    section#section-features-welcome {
+        h2 {
+            font-size: 3.85rem;
+            line-height: 5rem;
+
+            padding: 0 75px 25px 75px;
+            max-width: 850px;
         }
     }
 
