@@ -231,3 +231,9 @@ header {
         }
     }
 }
+
+.alert-active {
+    header {
+        border-top: 80px solid transparent; 
+    }
+}
