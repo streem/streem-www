@@ -21,19 +21,16 @@ Deploying with Netlify is a breeze, however, you do need to remember to configur
 
 This ensures that Netlify will build the newest version of the site when deployment occurs and targets the output from that build process and the root path of the site.
 
-## Browser Testing
-This section is to keep track of what browser testing has been performed and when.
+## Alerts
+The newest version supports "Alerts" which can be displayed at the top of all pages until dismissed by the user. These can be enabled/disabled via changes to the `alert.json` file in the `src/data` folder.
 
-Browser  |Device/OS         |Version    |Last Tested|Pass|Notes
----------|------------------|-----------|-----------|----|-----
-Chrome   |Android (Nexus 5x)|8.0        |2/24/2019  |Yes | Landscape could be better
-Safari   |iPad              |12.1.4     |2/24/2019  |Yes |
-Chrome   |iPhone X          |72 (12.0.1)|2/24/2019  |Yes | Portrait looks great but landscape experience could be better.
-Safari   |iPhone X          |12.0.1     |2/24/2019  |Yes | Portrait looks great but landscape experience could be better.
-Chrome   |Windows 10        |72         |2/24/2019  |Yes |
-Firefox  |Windows 10        |65         |2/24/2019  |Yes |
-Edge     |Windows 10        |42 (17)    |2/24/2019  |Yes | A few minor animation bugs that could be cleaned up.
-IE       |Windows 10        |11         |2/24/2019  |Yes | Bug with black bars around video on homepage.
-Firefox  |OSx               |65         |2/24/2019  |Yes |
-Chrome   |OSx               |71         |2/24/2019  |Yes |
-Safari   |OSx               |12.0.3     |2/24/2019  |Yes |
+The table below lists the available options and their function.
+
+|Name|Purpose|
+|----|-------|
+|enabled|This allows us to control whether the alert is active or not.|
+|id|This is what is used to track whether the user has seen this alert or not. Each time a new alert message is added, this `id` should be changed.|
+|message|This is the message that will be shown inline on the alert. This should be a fairly short summary of the alert, the link should provide details.|
+|details_url|This is the URL that will be used for the `Learn more` button on the alert bar. This link will always open in a new tab to keep focus on the site.|
+|style|This controls the style of the alert. There are currently two styles. `warning` or `danger`.
+

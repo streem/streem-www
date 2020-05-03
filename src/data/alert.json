@@ -1,0 +1,7 @@
+{
+    "enabled": true,
+    "id": "covid19",
+    "message": "Streem is helping small businesses, home services, and the trades stay safe and productive during COVID-19.",
+    "details_url": "https://www.cdc.gov/coronavirus/2019-ncov/index.html",
+    "style": "warning"
+}

@@ -17,6 +17,9 @@ const styleOutputPath = distPath;
 const htmlWatchPaths = [srcRoot + 'html/**/*.html'];
 const htmlBuildPaths = [srcRoot + 'html/**/*.html'];
 
+const dataWatchPaths = [srcRoot + 'data/**/*.json'];
+const dataBuildPaths = [srcRoot + 'data/**/*.json'];
+
 const scriptWatchPaths = [srcRoot + 'js/**/*.js'];
 const scriptBuildPaths = [srcRoot + 'js/plugins/**/*.js', srcRoot + 'js/custom/**/*.js'];
 const scriptCopyPaths  = [srcRoot + 'js/individual/**/*.js'];
@@ -91,6 +94,11 @@ gulp.task('build-html', function() {
         .pipe(gulp.dest(distPath));
 });
 
+gulp.task('build-data', function() { 
+    return gulp.src(dataBuildPaths)
+        .pipe(gulp.dest(distPath));
+});
+
 gulp.task('build-images', function() {
     return gulp.src(imgCopyPaths)
         .pipe(gulp.dest(imgOutputPath));
@@ -118,11 +126,12 @@ gulp.task('clean-dist', function() {
 });
 
 gulp.task('dev', gulp.series(
-    'build-styles-fast', 'build-scripts-fast', 'build-html', 'build-images', 'build-videos', 'build-fonts', 'build-root',
+    'build-styles-fast', 'build-scripts-fast', 'build-html', 'build-data', 'build-images', 'build-videos', 'build-fonts', 'build-root',
     function dev () {
         gulp.watch(styleWatchPaths, gulp.series('build-styles-fast'));
         gulp.watch(scriptWatchPaths, gulp.series('build-scripts'));
         gulp.watch(htmlWatchPaths, gulp.series('build-html'));
+        gulp.watch(dataBuildPaths, gulp.series('build-data'));
         gulp.watch(imgWatchPaths, gulp.parallel('build-images'));
         gulp.watch(videoWatchPaths, gulp.parallel('build-videos'));
         gulp.watch(fontWatchPaths, gulp.parallel('build-fonts'));
@@ -135,4 +144,4 @@ gulp.task('dev', gulp.series(
     })
 );
 
-gulp.task('build', gulp.series('clean-dist', 'build-styles', 'build-scripts', 'build-html', 'build-images', 'build-videos', 'build-root', 'build-fonts'));
+gulp.task('build', gulp.series('clean-dist', 'build-styles', 'build-scripts', 'build-html', 'build-data', 'build-images', 'build-videos', 'build-root', 'build-fonts'));
