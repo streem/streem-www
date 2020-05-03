@@ -108,9 +108,19 @@ aside {
         background: transparent;
         border: 2px solid #0099FF;
 
+        transition: background-image 300ms ease-out;
+
         &:hover {
             text-decoration: none;
+
+            color: #fff;
+            background: $blue-mid-color;
+            background-image: linear-gradient(to left, #23e5e5, #004dff);
         }
+    }
+
+    &:hover {
+        text-decoration: none;
     }
 }
 
