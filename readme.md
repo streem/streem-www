@@ -32,5 +32,5 @@ The table below lists the available options and their function.
 |id|This is what is used to track whether the user has seen this alert or not. Each time a new alert message is added, this `id` should be changed.|
 |message|This is the message that will be shown inline on the alert. This should be a fairly short summary of the alert, the link should provide details.|
 |details_url|This is the URL that will be used for the `Learn more` button on the alert bar. This link will always open in a new tab to keep focus on the site.|
-|style|This controls the style of the alert. There are currently two styles. `warning` or `danger`.
+|style|This controls the style of the alert. There are currently three styles. `notice`, `warning` or `danger`.
 

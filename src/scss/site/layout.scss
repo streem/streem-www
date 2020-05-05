@@ -805,7 +805,7 @@ footer {
     }
 }
 
-
+// Desktop transformation
 @media screen and (min-width: 1024px) {
     .logo-list {
         .logo-wrapper {
@@ -911,5 +911,28 @@ footer {
                 }
             }
         }
+    }
+}
+
+// Hacky landscape fixes
+@media screen and (max-height: 512px) and (orientation: landscape) {
+    section#section-welcome {
+        .content-overlay {
+            h1 {
+                font-size: 4rem;
+            }
+        }
+    }
+
+    section#section-features-welcome {
+        h2 {
+            font-size: 3rem;
+            line-height: 3rem;
+            padding: 25px 15px 0 15px;
+        }
+    }
+
+    section.landing-overlap {
+        margin-top: -50px;
     }
 }

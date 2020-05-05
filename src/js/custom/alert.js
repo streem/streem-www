@@ -1,6 +1,6 @@
 (function() {
 
-    var alertTemplate = Handlebars.compile('<div class="alert {{style}}"><div class="alert-message">{{message}}</div><a href="{{details_url}}" target="_blank" class="btn btn-outline">Learn More</a><a href="javascript:void(0);" class="alert-close"></a></div>');
+    var alertTemplate = Handlebars.compile('<div class="alert {{style}}"><div class="alert-message" onclick="javascript:window.open(\'{{details_url}}\');">{{message}}</div><a href="{{details_url}}" target="_blank" class="btn btn-outline">Learn More</a><a href="javascript:void(0);" class="alert-close"></a></div>');
 
     function loadAlertData(callback) {
         var rawFile = new XMLHttpRequest();
