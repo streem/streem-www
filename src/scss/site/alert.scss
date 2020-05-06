@@ -14,7 +14,7 @@
     z-index: 60;
 
     box-sizing: border-box;
-    padding: 0 25px;
+    padding: 0 35px 0 35px;
 
     border-left: 10px solid #11BF9F;
 
@@ -71,7 +71,7 @@
         height: 25px;
 
         position: absolute;
-        right: 25px;
+        right: 35px;
         top: 50%;
 
         margin-top: -12.5px;
@@ -102,6 +102,12 @@
 
 @media screen and (max-width: 768px) {
     .alert {   
+        padding: 0 25px 0 25px;
+
+        .alert-close {
+            right: 25px;
+        }
+
         .alert-message {
             font-weight: normal;
             font-size: 11px;
@@ -124,6 +130,21 @@
 
 @media screen and (max-width: 512px) {
     .alert {   
+        .alert-message {
+            text-decoration: underline;
+
+            &:after {
+                content: "↗";
+
+                display: inline-block;
+                padding-left: 2px;
+
+                font-style: normal;
+                text-decoration: none;
+
+                font-size: 15px;
+            }
+        }
 
         .btn {
             &.btn-outline {
