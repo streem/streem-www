@@ -19,10 +19,10 @@
 
         .card {
             position: relative;           
-            display: block;
-
-            margin: 0 -30px 45px -30px;
+            display: inline-block;
             max-width: 486px;
+
+            margin: 0 0 45px 0;            
 
             text-align: left;
 
@@ -184,6 +184,17 @@
                         }
                     }
                 }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 486px) {
+    .plan-block {
+        .container {    
+            .card {
+                margin-left: -35px;
+                margin-right: -35px;
             }
         }
     }
