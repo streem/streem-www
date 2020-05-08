@@ -3,18 +3,9 @@
         position: relative;
         text-align: center;
 
-        .background-mesh {
-            position: absolute;
-            left: -20%;
-            top: 10%;
-            width: 150%;
-            height: auto;
-
-            z-index: 0;
-
-            &+.background-mesh {
-                display: none;
-            }
+        .card-wrapper {
+            background: url('img/Meshbursts@2x.png') center center no-repeat;
+            background-size: 100% auto;
         }
 
         .card {
@@ -205,23 +196,6 @@
         .container {
             position: relative;
             white-space: nowrap;
-    
-            .background-mesh {
-                position: absolute;
-                left: auto;
-                right: 35%;
-                top: -10vw;
-                width: 55vw;
-                height: auto;
-    
-                z-index: 0;
-    
-                &+.background-mesh {
-                    display: block;
-                    margin-right: -35.2vw;
-                    margin-top: 11vw;
-                }
-            }
     
             .card {     
                 display: inline-block;
