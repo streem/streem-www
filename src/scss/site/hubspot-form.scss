@@ -1,0 +1,64 @@
+.modal {
+    .modal-wrapper {
+        .hbspt-form {
+            fieldset {
+                .field {
+                    display: block;
+                    float: none;
+                    width: 100%;
+        
+                    label {
+                        display: none;
+                    }
+
+                    .input {
+                        margin-left: 0;
+
+                        input {
+                            margin-left: 0;
+                            margin-right: 0;
+                            width: 100%;
+                            padding: 1.5rem 1rem !important;
+
+                            margin: 0;
+                        }
+                    }
+                }
+
+                .legal-consent-container {
+                    p {
+                        text-align: left;
+                        padding-top: 1rem;
+
+                        font-size: 0.8rem;
+                        line-height: 1.2rem;
+                    }
+                }
+            }
+
+            form {
+                padding-top: 2rem;
+                padding-bottom: 0;
+                margin-bottom: 0;
+            }
+        }
+
+        .hs_submit {
+            .actions {
+                text-align: center;
+                margin: 0;
+                padding-bottom: 0;
+
+                .hs-button.primary {
+                    color: #fff;
+                    padding: 15px 60px;
+                    border-radius: 120px;
+
+                    border: none;
+                    background: $blue-mid-color;
+                    background-image: linear-gradient(to left, #23e5e5, #004dff);
+                }
+            }
+        }
+    }
+}
