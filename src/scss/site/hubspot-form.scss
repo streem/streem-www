@@ -8,15 +8,33 @@
                     width: 100%;
         
                     label {
-                        display: none;
+                        //display: none;
+                        font-family: $font-family-type;
+                        font-weight: normal;
+                        text-align: left;
+                        width: auto;
+
+                        padding: 5px 0 5px 0;
+                        float: none;
+                    }
+
+                    legend {
+                        text-align: right;
+                        display: block;
+                        float: none;
+
+                        padding: 2px 0;
+                    }
+
+                    select {
+                        padding: 10px;
+                        height: auto;
                     }
 
                     .input {
-                        margin-left: 0;
+                        margin: 0;
 
                         input {
-                            margin-left: 0;
-                            margin-right: 0;
                             width: 100%;
                             padding: 1.5rem 1rem !important;
 
@@ -41,13 +59,17 @@
                 padding-bottom: 0;
                 margin-bottom: 0;
             }
+
+            .hs-error-msg {
+                color: #cc0000;
+            }
         }
 
         .hs_submit {
             .actions {
                 text-align: center;
                 margin: 0;
-                padding-bottom: 0;
+                padding: 25px 0 0 0;
 
                 .hs-button.primary {
                     color: #fff;
