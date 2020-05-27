@@ -58,6 +58,11 @@
                 padding-top: 2rem;
                 padding-bottom: 0;
                 margin-bottom: 0;
+
+                .hs_recaptcha {
+                    position: absolute;
+                    left: -90000;
+                }
             }
 
             .hs-error-msg {
