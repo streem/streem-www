@@ -41,6 +41,9 @@ const rootAssetWatchPaths = [ srcRoot + 'assets/root/**/*.*' ];
 const rootAssetCopyPaths = [ srcRoot + 'assets/root/**/*.*' ];
 const rootAssetOutputPath = distPath;
 
+const redirectsCopyPaths = [ './_redirects' ];
+const redirectsOutputPath = distPath;
+
 // Working variables
 var devServer = browserSync.create();
 
@@ -54,12 +57,12 @@ function buildStyles(fastBuild) {
         g.pipe(autoprefixer())
             .pipe(cleanCSS());
     }
-    
+
     return g.pipe(gulp.dest(styleOutputPath));
 }
 
 function buildScripts(fastBuild) {
-    var g = 
+    var g =
         gulp.src(scriptBuildPaths)
             .pipe(concat('scripts.js'));
 
@@ -67,19 +70,19 @@ function buildScripts(fastBuild) {
     if (fastBuild !== true) {
         g.pipe(uglify());
     }
-    
+
     return g.pipe(gulp.dest(scriptOutputPath));
 }
 
 function copyScripts(fastBuild) {
-    var g = 
+    var g =
         gulp.src(scriptCopyPaths);
 
     // Perform optimizations for release here
     if (fastBuild !== true) {
         g.pipe(uglify());
     }
-    
+
     return g.pipe(gulp.dest(scriptOutputPath));
 }
 
@@ -89,12 +92,12 @@ gulp.task('build-styles-fast', function() { return buildStyles(true); });
 gulp.task('build-scripts', gulp.parallel(function copyIndividualScripts() { return copyScripts(); }, function mergeScripts() { return buildScripts(); }));
 gulp.task('build-scripts-fast', gulp.parallel(function copyIndividualScripts() { return copyScripts(true); }, function mergeScripts() { return buildScripts(true); }));
 
-gulp.task('build-html', function() { 
+gulp.task('build-html', function() {
     return gulp.src(htmlBuildPaths)
         .pipe(gulp.dest(distPath));
 });
 
-gulp.task('build-data', function() { 
+gulp.task('build-data', function() {
     return gulp.src(dataBuildPaths)
         .pipe(gulp.dest(distPath));
 });
@@ -117,6 +120,11 @@ gulp.task('build-fonts', function() {
 gulp.task('build-root', function() {
     return gulp.src(rootAssetCopyPaths)
         .pipe(gulp.dest(rootAssetOutputPath));
+});
+
+gulp.task('build-redirects', function() {
+    return gulp.src(redirectsCopyPaths)
+        .pipe(gulp.dest(redirectsOutputPath));
 });
 
 gulp.task('clean-dist', function() {
@@ -144,4 +152,4 @@ gulp.task('dev', gulp.series(
     })
 );
 
-gulp.task('build', gulp.series('clean-dist', 'build-styles', 'build-scripts', 'build-html', 'build-data', 'build-images', 'build-videos', 'build-root', 'build-fonts'));
+gulp.task('build', gulp.series('clean-dist', 'build-styles', 'build-scripts', 'build-html', 'build-data', 'build-images', 'build-videos', 'build-fonts', 'build-root', 'build-redirects'));
