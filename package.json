@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "devDependencies": {
     "browser-sync": "*",
-    "del": "^5.1.0",
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.1",
-    "gulp-clean-css": "^4.3.0",
+    "del": "*",
+    "gulp": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-clean-css": "*",
     "gulp-concat": "*",
-    "gulp-sass": "^3.0.0",
-    "gulp-uglify": "^3.0.2",
+    "gulp-sass": "*",
+    "gulp-uglify": "*",
     "gulp-watch": "*"
   }
 }
